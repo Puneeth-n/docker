@@ -18,7 +18,7 @@ copy_reference_file() {
 		mkdir -p /var/jenkins_home/${dir:23}
 		cp -r /usr/share/jenkins/ref/${rel} /var/jenkins_home/${rel};
 		# pin plugins on initial copy
-		[[ ${rel} == plugins/*.jpi ]] && touch /var/jenkins_home/${rel}.pinned
+		# [[ ${rel} == plugins/*.jpi ]] && touch /var/jenkins_home/${rel}.pinned
 	fi; 
 }
 export -f copy_reference_file
