@@ -1,0 +1,16 @@
+antisamy-markup-formatter
+credentials
+cvs
+javadoc
+junit
+mailer
+matrix-auth
+matrix-project
+maven-plugin
+pam-auth
+script-security
+ssh-credentials
+ssh-slaves
+subversion
+translation
+windows-slaves
