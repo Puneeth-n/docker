@@ -21,6 +21,7 @@ javadoc
 jquery-ui:latest
 jquery:latest
 junit
+log-parser:latest
 mailer
 mapdb-api:latest
 matrix-auth
@@ -37,6 +38,7 @@ pollscm:latest
 preSCMbuildstep:latest
 scm-api:latest
 script-security
+sidebar-link:latest
 ssh-credentials
 ssh-slaves
 subversion
