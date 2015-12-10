@@ -5,9 +5,7 @@ The Jenkins Continuous Integration and Delivery server.
 This is a fully functional Jenkins server, based on the Long Term Support release
 http://jenkins-ci.org/
 
-
 <img src="http://jenkins-ci.org/sites/default/files/jenkins_logo.png"/>
-
 
 # Usage
 
@@ -26,7 +24,6 @@ docker run -p 8080:8080 -p 50000:50000 -v /your/home:/var/jenkins_home jenkins
 
 This will store the jenkins data in `/your/home` on the host.
 Ensure that `/your/home` is accessible by the jenkins user in container (jenkins user - uid 1000) or use `-u some_other_user` parameter with `docker run`.
-
 
 You can also use a volume container:
 
@@ -65,7 +62,6 @@ FROM jenkins
 COPY executors.groovy /usr/share/jenkins/ref/init.groovy.d/executors.groovy
 ```
 
-
 # Attaching build executors
 
 You can run builds on the master out of the box.
@@ -76,7 +72,7 @@ If you are only using [SSH slaves](https://wiki.jenkins-ci.org/display/JENKINS/S
 
 # Passing JVM parameters
 
-You might need to customize the JVM running Jenkins, typically to pass system properties or tweak heap memory settings. Use JAVA_OPTS environment 
+You might need to customize the JVM running Jenkins, typically to pass system properties or tweak heap memory settings. Use JAVA_OPTS environment
 variable for this purpose :
 
 ```
@@ -97,7 +93,6 @@ java.util.logging.ConsoleHandler.level=FINEST
 EOF
 docker run --name myjenkins -p 8080:8080 -p 50000:50000 --env JAVA_OPTS="-Djava.util.logging.config.file=/var/jenkins_home/log.properties" -v `pwd`/data:/var/jenkins_home jenkins
 ```
-
 
 # Passing Jenkins launcher parameters
 
@@ -133,7 +128,7 @@ docker run --name myjenkins -p 8080:8080 -p 50001:50001 --env JENKINS_SLAVE_AGEN
 
 # Installing more tools
 
-You can run your container as root - and install via apt-get, install as part of build steps via jenkins tool installers, or you can create your own Dockerfile to customise, for example: 
+You can run your container as root - and install via apt-get, install as part of build steps via jenkins tool installers, or you can create your own Dockerfile to customise, for example:
 
 ```
 FROM jenkins
@@ -143,7 +138,7 @@ RUN apt-get update && apt-get install -y ruby make more-thing-here
 USER jenkins # drop back to the regular jenkins user - good practice
 ```
 
-In such a derived image, you can customize your jenkins instance with hook scripts or additional plugins. 
+In such a derived image, you can customize your jenkins instance with hook scripts or additional plugins.
 For this purpose, use `/usr/share/jenkins/ref` as a place to define the default JENKINS_HOME content you
 wish the target installation to look like :
 
@@ -178,7 +173,6 @@ FROM jenkins
 COPY plugins.txt /usr/share/jenkins/plugins.txt
 RUN /usr/local/bin/plugins.sh /usr/share/jenkins/plugins.txt
 ```
-
 
 # Upgrading
 
