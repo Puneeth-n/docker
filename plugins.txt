@@ -46,7 +46,7 @@ ssh-slaves
 subversion
 support-core:latest
 swarm:latest
-token-macro:1.11
+token-macro:latest
 tool-labels-plugin:latest
 translation
 view-job-filters:latest
