@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <project>
   <actions/>
   <description>[JENKINS-32174](https://issues.jenkins-ci.org/browse/JENKINS-32174) No arguments to notifyCommit.</description>
@@ -13,7 +13,7 @@
     </userRemoteConfigs>
     <branches>
       <hudson.plugins.git.BranchSpec>
-        <name>no-slash</name>
+        <name>develop/verify/JENKINS-32174</name>
       </hudson.plugins.git.BranchSpec>
     </branches>
     <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
@@ -27,15 +27,14 @@
     </extensions>
   </scm>
   <quietPeriod>0</quietPeriod>
-  <assignedNode>! alanmwaite-pc</assignedNode>
-  <canRoam>false</canRoam>
+  <canRoam>true</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <jdk>(Default)</jdk>
   <triggers>
     <hudson.triggers.SCMTrigger>
-      <spec/>
+      <spec></spec>
       <ignorePostCommitHooks>false</ignorePostCommitHooks>
     </hudson.triggers.SCMTrigger>
   </triggers>
@@ -44,8 +43,8 @@
     <hudson.plugins.xshell.XShellBuilder plugin="xshell@0.10">
       <commandLine>git log -n 1</commandLine>
       <executeFromWorkingDir>false</executeFromWorkingDir>
-      <regexToKill/>
-      <timeAllocated/>
+      <regexToKill></regexToKill>
+      <timeAllocated></timeAllocated>
     </hudson.plugins.xshell.XShellBuilder>
   </builders>
   <publishers/>
