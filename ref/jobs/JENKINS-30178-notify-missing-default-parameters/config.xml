@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>[JENKINS-30178]() a job which runs from a commit notification is missing the default parameters</description>
+  <description>[JENKINS-30178](https://issues.jenkins-ci.org/browse/JENKINS-30178) a job which runs from a commit notification is missing the default parameters</description>
   <logRotator class="hudson.tasks.LogRotator">
     <daysToKeep>-1</daysToKeep>
     <numToKeep>15</numToKeep>
