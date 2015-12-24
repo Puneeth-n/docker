@@ -41,7 +41,7 @@
   </scm>
   <quietPeriod>0</quietPeriod>
   <canRoam>true</canRoam>
-  <disabled>false</disabled>
+  <disabled>true</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers>
@@ -80,7 +80,7 @@
   </builders>
   <publishers>
     <hudson.plugins.textfinder.TextFinderPublisher plugin="text-finder@1.10">
-      <regexp>remotes/origin-only-master-branch/master-findbugs-fixes</regexp>
+      <regexp>remotes/origin-only-master-branch/2.2.x</regexp>
       <succeedIfFound>false</succeedIfFound>
       <unstableIfFound>true</unstableIfFound>
       <alsoCheckConsoleOutput>true</alsoCheckConsoleOutput>
