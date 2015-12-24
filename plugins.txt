@@ -47,6 +47,7 @@ ssh-slaves
 subversion
 support-core:latest
 swarm:latest
+text-finder:latest
 token-macro:latest
 tool-labels-plugin:latest
 translation
