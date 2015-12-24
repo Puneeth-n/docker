@@ -54,6 +54,11 @@ EXPOSE 50000
 
 ENV COPY_REFERENCE_FILE_LOG $JENKINS_HOME/copy_reference_file.log
 
+RUN echo en_US.UTF-8 UTF-8 >> /etc/locale.gen
+RUN locale-gen en_US.UTF-8
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US:en
+
 USER jenkins
 
 COPY jenkins.sh /usr/local/bin/jenkins.sh
