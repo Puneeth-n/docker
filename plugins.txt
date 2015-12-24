@@ -23,6 +23,7 @@ javadoc
 jquery:latest
 jquery-ui:latest
 junit
+leastload:latest
 log-parser:latest
 mailer
 mapdb-api:latest
