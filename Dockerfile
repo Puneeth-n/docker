@@ -9,6 +9,11 @@ RUN apt-get update && apt-get install -y \
   zip \
   && rm -rf /var/lib/apt/lists/*
 
+# Need locale to assure UTF-8 files can be written to file system
+RUN echo en_US.UTF-8 UTF-8 >> /etc/locale.gen && locale-gen en_US.UTF-8
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US:en
+
 ENV JENKINS_HOME /var/jenkins_home
 ENV JENKINS_SLAVE_AGENT_PORT 50000
 
@@ -53,11 +58,6 @@ EXPOSE 8080
 EXPOSE 50000
 
 ENV COPY_REFERENCE_FILE_LOG $JENKINS_HOME/copy_reference_file.log
-
-RUN echo en_US.UTF-8 UTF-8 >> /etc/locale.gen
-RUN locale-gen en_US.UTF-8
-ENV LANG en_US.UTF-8
-ENV LANGUAGE en_US:en
 
 USER jenkins
 
