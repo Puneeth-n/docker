@@ -39,6 +39,7 @@
         <timeout>1</timeout>
       </hudson.plugins.git.extensions.impl.CloneOption>
       <hudson.plugins.git.extensions.impl.AuthorInChangelog/>
+      <hudson.plugins.git.extensions.impl.WipeWorkspace/>
     </extensions>
   </scm>
   <quietPeriod>0</quietPeriod>
