@@ -30,6 +30,7 @@ mapdb-api:latest
 matrix-auth
 matrix-project
 maven-plugin
+mercurial:latest
 metrics:latest
 multi-branch-project-plugin:latest
 multiple-scms:latest
