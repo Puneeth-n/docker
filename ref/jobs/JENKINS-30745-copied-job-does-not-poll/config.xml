@@ -66,8 +66,7 @@
     </extensions>
   </scm>
   <quietPeriod>1</quietPeriod>
-  <assignedNode>debian8 || master || centos7x64</assignedNode>
-  <canRoam>false</canRoam>
+  <canRoam>true</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
