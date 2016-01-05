@@ -18,7 +18,7 @@
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
-        <url>git://mark-pc1.markwaite.net/git/mwaite/bugs/JENKINS-32258.git</url>
+        <url>https://github.com/MarkEWaite/JENKINS-5724-many-branches.git</url>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
@@ -28,8 +28,8 @@
     </branches>
     <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
     <gitTool>Default</gitTool>
-    <browser class="hudson.plugins.git.browser.GitWeb">
-      <url>http://mark-pc1.markwaite.net/gitweb/?p=mwaite/bugs/JENKINS-32258.git</url>
+    <browser class="hudson.plugins.git.browser.GithubWeb">
+      <url>https://github.com/MarkEWaite/JENKINS-5724-many-branches.git</url>
     </browser>
     <submoduleCfg class="list"/>
     <extensions>
@@ -37,8 +37,7 @@
     </extensions>
   </scm>
   <quietPeriod>0</quietPeriod>
-  <assignedNode>centos7x64</assignedNode>
-  <canRoam>false</canRoam>
+  <canRoam>true</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
