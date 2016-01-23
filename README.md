@@ -153,6 +153,9 @@ When jenkins container starts, it will check JENKINS_HOME has this reference con
 there if required. It will not override such files, so if you upgraded some plugins from UI they won't
 be reverted on next start.
 
+In case you *do* want to override, append '.override' to the name of the reference file. E.g. a file named
+`/usr/share/jenkins/ref/config.xml.override` will overwrite an existing `config.xml` file in JENKINS_HOME.
+
 Also see [JENKINS-24986](https://issues.jenkins-ci.org/browse/JENKINS-24986)
 
 For your convenience, you also can use a plain text file to define plugins to be installed
