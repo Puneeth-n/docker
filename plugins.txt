@@ -7,6 +7,7 @@ config-file-provider:latest
 credentials
 cvs
 depgraph-view:latest
+description-setter:latest
 elastic-axis:latest
 findbugs:latest
 git-client:latest
