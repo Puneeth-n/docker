@@ -44,6 +44,7 @@ preSCMbuildstep:latest
 scm-api:latest
 script-security
 sidebar-link:latest
+ssh-agent:latest
 ssh-credentials
 ssh-slaves
 subversion
