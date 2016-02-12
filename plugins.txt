@@ -36,6 +36,7 @@ metrics:latest
 multi-branch-project-plugin:latest
 multiple-scms:latest
 pam-auth
+parameterized-trigger:latest
 pegdown-formatter:latest
 plain-credentials:latest
 platformlabeler:latest
