@@ -17,6 +17,7 @@ git:latest
 git-parameter:latest
 git-server:latest
 htmlpublisher:latest
+icon-shim:latest
 implied-labels:latest
 jackson2-api:latest
 jacoco:1.0.19
