@@ -32,7 +32,7 @@
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
-        <url>git://mark-pc1.markwaite.net/git/mwaite/jenkins/git-client-plugin.git/</url>
+        <url>git://github.com/MarkEWaite/git-client-plugin.git/</url>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
