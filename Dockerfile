@@ -17,10 +17,16 @@ ENV LANGUAGE en_US:en
 ENV JENKINS_HOME /var/jenkins_home
 ENV JENKINS_SLAVE_AGENT_PORT 50000
 
+ARG user=jenkins
+ARG group=jenkins
+ARG uid=1000
+ARG gid=1000
+
 # Jenkins is run with user `jenkins`, uid = 1000
 # If you bind mount a volume from the host or a data container,
 # ensure you use the same uid
-RUN useradd -d "$JENKINS_HOME" -u 1000 -m -s /bin/bash jenkins
+RUN groupadd -g ${gid} ${group} \
+    && useradd -d "$JENKINS_HOME" -u ${uid} -g ${gid} -m -s /bin/bash ${user}
 
 # Jenkins home directory is a volume, so configuration and build history
 # can be persisted and survive image upgrades
@@ -34,8 +40,10 @@ RUN curl -fL https://github.com/krallin/tini/releases/download/v0.5.0/tini-stati
 
 COPY init.groovy /usr/share/jenkins/ref/init.groovy.d/tcp-slave-agent-port.groovy
 
-ENV JENKINS_VERSION 1.642.3
-ENV JENKINS_SHA 2203f94a9b8fbd8d767ba244726f63ef01175b95
+ARG JENKINS_VERSION
+ENV JENKINS_VERSION ${JENKINS_VERSION:-1.642.3}
+ARG JENKINS_SHA
+ENV JENKINS_SHA ${JENKINS_SHA:-2203f94a9b8fbd8d767ba244726f63ef01175b95}
 
 # could use ADD but this one does not check Last-Modified header
 # see https://github.com/docker/docker/issues/8331
@@ -49,7 +57,7 @@ ENV JENKINS_UC https://updates.jenkins-ci.org
 # or config file with your custom jenkins Docker image.
 ADD ref /usr/share/jenkins/ref/
 
-RUN chown -R jenkins "$JENKINS_HOME" /usr/share/jenkins/ref
+RUN chown -R ${user} "$JENKINS_HOME" /usr/share/jenkins/ref
 
 # for main web interface:
 EXPOSE 8080
@@ -59,7 +67,7 @@ EXPOSE 50000
 
 ENV COPY_REFERENCE_FILE_LOG $JENKINS_HOME/copy_reference_file.log
 
-USER jenkins
+USER ${user}
 
 ENV LOGNAME jenkins
 
