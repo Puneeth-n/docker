@@ -63,6 +63,7 @@ subversion
 support-core:latest
 swarm:latest
 text-finder:latest
+timestamper:latest
 token-macro:latest
 tool-labels-plugin:latest
 translation
