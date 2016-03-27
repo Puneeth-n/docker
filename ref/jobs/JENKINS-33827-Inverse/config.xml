@@ -59,9 +59,9 @@
   </triggers>
   <concurrentBuild>false</concurrentBuild>
   <builders>
-    <hudson.tasks.BatchFile>
+    <hudson.plugins.xshell.XShellBuilder>
       <command>git branch</command>
-    </hudson.tasks.BatchFile>
+    </hudson.plugins.xshell.XShellBuilder>
   </builders>
   <publishers>
     <hudson.plugins.descriptionsetter.DescriptionSetterPublisher plugin="description-setter@1.10">
