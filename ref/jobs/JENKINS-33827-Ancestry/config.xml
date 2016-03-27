@@ -40,6 +40,9 @@
       <hudson.plugins.git.BranchSpec>
         <name>*/JENKINS-*3</name>
       </hudson.plugins.git.BranchSpec>
+      <hudson.plugins.git.BranchSpec>
+        <name>**JENKINS-33433**</name>
+      </hudson.plugins.git.BranchSpec>
     </branches>
     <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
     <gitTool>Default</gitTool>
