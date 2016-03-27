@@ -39,6 +39,7 @@
       </hudson.plugins.git.BranchSpec>
     </branches>
     <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+    <gitTool>Default</gitTool>
     <submoduleCfg class="list"/>
     <extensions>
       <hudson.plugins.git.extensions.impl.BuildChooserSetting>
@@ -64,8 +65,11 @@
   </triggers>
   <concurrentBuild>false</concurrentBuild>
   <builders>
-    <hudson.plugins.xshell.XShellBuilder>
-      <command>git branch</command>
+    <hudson.plugins.xshell.XShellBuilder plugin="xshell@0.10">
+      <commandLine>git branch</commandLine>
+      <executeFromWorkingDir>false</executeFromWorkingDir>
+      <regexToKill></regexToKill>
+      <timeAllocated></timeAllocated>
     </hudson.plugins.xshell.XShellBuilder>
   </builders>
   <publishers>
