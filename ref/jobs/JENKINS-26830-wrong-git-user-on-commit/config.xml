@@ -11,7 +11,7 @@ Console output for each job should contain &quot;`user.name=Mark Waite`&quot; an
   </logRotator>
   <keepDependencies>false</keepDependencies>
   <properties/>
-  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.4.0">
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.4.2">
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
@@ -48,18 +48,7 @@ Console output for each job should contain &quot;`user.name=Mark Waite`&quot; an
     <org.jenkinsci.plugins.elasticaxisplugin.ElasticAxis plugin="elastic-axis@1.2">
       <name>label</name>
       <values>
-        <string>waite2011</string>
-        <string>alan-pc</string>
-        <string>tropicana</string>
-        <string>family-win7-a</string>
-        <string>debian6x86</string>
-        <string>centos66</string>
-        <string>debian8</string>
-        <string>wheezy64b</string>
-        <string>centos7x64</string>
         <string>master</string>
-        <string>jessie64a</string>
-        <string>markwaite</string>
       </values>
       <label>windows , linux </label>
       <ignoreOffline>true</ignoreOffline>
@@ -83,7 +72,7 @@ Console output for each job should contain &quot;`user.name=Mark Waite`&quot; an
   <publishers>
     <hudson.plugins.textfinder.TextFinderPublisher plugin="text-finder@1.10">
       <regexp>user\.name.*Mark.Waite</regexp>
-      <succeedIfFound>false</succeedIfFound>
+      <succeedIfFound>true</succeedIfFound>
       <unstableIfFound>false</unstableIfFound>
       <alsoCheckConsoleOutput>true</alsoCheckConsoleOutput>
     </hudson.plugins.textfinder.TextFinderPublisher>
