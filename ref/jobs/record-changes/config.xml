@@ -42,6 +42,7 @@ if [ ! -d $JENKINS_HOME/.git ]; then
     echo .jenkins/ >> .gitignore &amp;&amp; \
     echo .m2/ >> .gitignore &amp;&amp; \
     echo tools/ >> .gitignore &amp;&amp; \
+    echo userContent/ >> .gitignore &amp;&amp; \
     echo war/ >> .gitignore &amp;&amp; \
     git add .gitignore
 fi
