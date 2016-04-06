@@ -46,6 +46,9 @@ multiple-scms:latest
 pam-auth
 parameterized-trigger:latest
 pegdown-formatter:latest
+pipeline-build-step:latest
+pipeline-input-step:latest
+pipeline-stage-step:latest
 plain-credentials:latest
 platformlabeler:latest
 pollscm:latest
@@ -56,6 +59,7 @@ sidebar-link:latest
 ssh-agent:latest
 ssh-credentials
 ssh-slaves
+structs:latest
 subversion
 support-core:latest
 swarm:latest
