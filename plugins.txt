@@ -44,11 +44,8 @@ momentjs:latest
 multi-branch-project-plugin:latest
 multiple-scms:latest
 pam-auth
-parallel-test-executor:latest
 parameterized-trigger:latest
 pegdown-formatter:latest
-pipeline-rest-api:latest
-pipeline-stage-view:latest
 plain-credentials:latest
 platformlabeler:latest
 pollscm:latest
