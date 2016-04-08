@@ -10,7 +10,8 @@ This is a fully functional Jenkins server, based on the Long Term Support releas
 # Usage
 
 ```
-docker run -p 8080:8080 -p 50000:50000 jenkins
+docker build -t markewaite/master-with-plugins:latest .
+docker run -i --rm -p 8080:8080 -p 50000:50000 -v ~/.m2/:/var/jenkins_home/.m2/ -t markewaite/master-with-plugins:latest
 ```
 
 NOTE: read below the _build executors_ part for the role of the `50000` port mapping.
