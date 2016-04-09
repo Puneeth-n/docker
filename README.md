@@ -169,7 +169,7 @@ maven-plugin:2.7.1
 ...
 ```
 
-And in derived Dockerfile just invoke the utility plugin.sh script
+And in derived Dockerfile just invoke the utility `plugins.sh` script
 
 ```
 FROM jenkins
