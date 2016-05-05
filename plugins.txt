@@ -49,6 +49,7 @@ pegdown-formatter:latest
 pipeline-build-step:latest
 pipeline-input-step:latest
 pipeline-stage-step:latest
+pipeline-stage-view:latest
 plain-credentials:latest
 platformlabeler:latest
 pollscm:latest
