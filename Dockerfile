@@ -44,16 +44,16 @@ RUN curl -fsSL https://github.com/krallin/tini/releases/download/v0.5.0/tini-sta
 COPY init.groovy /usr/share/jenkins/ref/init.groovy.d/tcp-slave-agent-port.groovy
 
 ARG JENKINS_VERSION
-ENV JENKINS_VERSION ${JENKINS_VERSION:-1.651.1}
+ENV JENKINS_VERSION ${JENKINS_VERSION:-1.651.2}
 ARG JENKINS_SHA
-ENV JENKINS_SHA ${JENKINS_SHA:-31fcae60edba2ecb6c380c59f374761723981283}
+ENV JENKINS_SHA ${JENKINS_SHA:-f61b8b604acba5076a93dcde28c0be2561d17bde}
 
 # could use ADD but this one does not check Last-Modified header
 # see https://github.com/docker/docker/issues/8331
 RUN curl -fsSL http://repo.jenkins-ci.org/public/org/jenkins-ci/main/jenkins-war/${JENKINS_VERSION}/jenkins-war-${JENKINS_VERSION}.war -o /usr/share/jenkins/jenkins.war \
   && echo "$JENKINS_SHA  /usr/share/jenkins/jenkins.war" | sha1sum -c -
 
-ENV JENKINS_UC https://updates.jenkins-ci.org
+ENV JENKINS_UC https://updates.jenkins.io
 
 # `/usr/share/jenkins/ref/` contains all reference configuration we want
 # to set on a fresh new installation. Use it to bundle additional plugins
