@@ -58,6 +58,7 @@ parallel-test-executor:latest
 parameterized-trigger:latest
 pegdown-formatter:latest
 pipeline-build-step:latest
+pipeline-graph-analysis:latest
 pipeline-input-step:latest
 pipeline-rest-api:latest
 pipeline-stage-step:latest
