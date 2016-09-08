@@ -15,6 +15,7 @@ credentials
 cvs
 depgraph-view:latest
 description-setter:latest
+display-url-api:latest
 durable-task:latest
 elastic-axis:latest
 findbugs:latest
