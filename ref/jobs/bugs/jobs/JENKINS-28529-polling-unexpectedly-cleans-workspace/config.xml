@@ -92,7 +92,7 @@ It should remain after polling.  The bug is that the file is deleted by the poll
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Ant plugin="ant@1.3">
-      <targets></targets>
+      <targets>create-file</targets>
       <antName>ant-latest</antName>
     </hudson.tasks.Ant>
     <hudson.plugins.xshell.XShellBuilder plugin="xshell@0.10">
