@@ -41,6 +41,7 @@ jquery-detached:latest
 jquery:latest
 jquery-ui:latest
 junit
+label-verifier:latest
 ldap
 leastload:latest
 log-parser:latest
